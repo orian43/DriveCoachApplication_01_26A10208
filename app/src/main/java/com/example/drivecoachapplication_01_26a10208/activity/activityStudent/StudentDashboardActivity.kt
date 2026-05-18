@@ -1,5 +1,6 @@
 package com.example.drivecoachapplication_01_26a10208.activity.activityStudent
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -16,12 +17,14 @@ import com.example.drivecoach.model.StudentProgressTask
 import com.example.drivecoachapplication_01_26a10208.manager.LessonManager
 import com.example.drivecoachapplication_01_26a10208.manager.StudentManager
 import com.google.firebase.auth.FirebaseAuth
+import com.example.drivecoachapplication_01_26a10208.R
 
 class StudentDashboardActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityStudentDashboardBinding
     private val auth = FirebaseAuth.getInstance()
     private var studentId = ""
+    private var isTeacherView = false
 
     private val taskList = mutableListOf<StudentProgressTask>()
     private lateinit var taskAdapter: StudentTasksAdapter
@@ -32,12 +35,14 @@ class StudentDashboardActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         studentId = intent.getStringExtra("STUDENT_ID") ?: ""
+        // Receiving the new flag that comes from the teacher (if nothing is sent, the default is false)
+        isTeacherView = intent.getBooleanExtra("IS_TEACHER_VIEW", false)
 
         taskAdapter = StudentTasksAdapter(taskList)
         binding.rvStudentDashboardTasks.layoutManager = LinearLayoutManager(this)
         binding.rvStudentDashboardTasks.adapter = taskAdapter
 
-        // Transferring the studentId to the profile screen
+        // Go to the student profile screen
         binding.cardStudentProfileImage.setOnClickListener {
             val intent = Intent(this, StudentProfileActivity::class.java).apply {
                 putExtra("STUDENT_ID", studentId)
@@ -45,7 +50,7 @@ class StudentDashboardActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // Go to the lesson tracking and analysis screen for the student
+        //Go to the lesson list screen
         binding.btnViewMyLessons.setOnClickListener {
             val intent = Intent(this, StudentLessonsActivity::class.java).apply {
                 putExtra("STUDENT_ID", studentId)
@@ -53,12 +58,23 @@ class StudentDashboardActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        binding.btnStudentLogout.setOnClickListener {
-            auth.signOut()
-            val intent = Intent(this, MainActivity::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-            startActivity(intent)
-            finish()
+        //If a teacher is watching, disable the logout button so they don't accidentally log out of their teacher account.
+        if (isTeacherView) {
+            binding.btnStudentLogout.visibility = View.GONE
+        } else {
+            binding.btnStudentLogout.visibility = View.VISIBLE
+            binding.btnStudentLogout.setOnClickListener {
+                auth.signOut()
+
+                // Clearing the student's local session from the device
+                val prefs = getSharedPreferences("DriveCoachPrefs", Context.MODE_PRIVATE)
+                prefs.edit().clear().apply()
+
+                val intent = Intent(this, MainActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                startActivity(intent)
+                finish()
+            }
         }
     }
 
@@ -82,7 +98,11 @@ class StudentDashboardActivity : AppCompatActivity() {
 
         StudentManager.getStudentProfile(studentId,
             onSuccess = { studentProfile ->
-                binding.tvStudentWelcomeTitle.text = "Welcome, ${studentProfile.firstName}!"
+                if (isTeacherView) {
+                    binding.tvStudentWelcomeTitle.text = "${studentProfile.firstName} ${studentProfile.lastName}"
+                } else {
+                    binding.tvStudentWelcomeTitle.text = "Welcome, ${studentProfile.firstName}!"
+                }
                 binding.tvStudentStartDateDisplay.text = "Started: ${studentProfile.startDate}"
 
                 taskList.clear()

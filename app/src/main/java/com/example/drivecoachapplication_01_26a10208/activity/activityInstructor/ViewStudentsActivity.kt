@@ -19,6 +19,7 @@ import com.example.drivecoach.model.Student
 import com.example.drivecoachapplication_01_26a10208.manager.StudentManager
 import com.example.drivecoachapplication_01_26a10208.utils.SoundManager
 import com.example.drivecoachapplication_01_26a10208.utils.Vibration
+import com.example.drivecoachapplication_01_26a10208.activity.activityStudent.StudentDashboardActivity
 
 class ViewStudentsActivity : AppCompatActivity() {
 
@@ -59,7 +60,7 @@ class ViewStudentsActivity : AppCompatActivity() {
         )
     }
 
-   //An automatic dialog pops up for the teacher asking whether to reset the password
+    //An automatic dialog pops up for the teacher asking whether to reset the password
     private fun showResetPasswordStep1Confirmation(studentId: String, fullName: String) {
         val builder = AlertDialog.Builder(this, android.R.style.Theme_Material_Dialog_Alert)
         builder.setTitle("Password reset")
@@ -78,7 +79,7 @@ class ViewStudentsActivity : AppCompatActivity() {
         builder.show()
     }
 
-//Additional message about writing a new password for the student
+    //Additional message about writing a new password for the student
     private fun showResetPasswordStep2Input(studentId: String, fullName: String) {
         val builder = AlertDialog.Builder(this, android.R.style.Theme_Material_Dialog_Alert)
         builder.setTitle("Writing a new password")
@@ -189,9 +190,9 @@ class ViewStudentsActivity : AppCompatActivity() {
                 val currentPos = holder.adapterPosition
                 if (currentPos != RecyclerView.NO_POSITION) {
                     val targetStudent = dataset[currentPos]
-                    val intent = Intent(this@ViewStudentsActivity, LessonAnalysisActivity::class.java).apply {
+                    val intent = Intent(this@ViewStudentsActivity, StudentDashboardActivity::class.java).apply {
                         putExtra("STUDENT_ID", targetStudent.id)
-                        putExtra("STUDENT_NAME", "${targetStudent.firstName} ${targetStudent.lastName}")
+                        putExtra("IS_TEACHER_VIEW", true)
                     }
                     startActivity(intent)
                 }
