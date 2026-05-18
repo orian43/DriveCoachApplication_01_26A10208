@@ -96,7 +96,7 @@
             android:layout_weight="1"
             android:nestedScrollingEnabled="false"
             android:layout_marginBottom="24dp"
-            tools:listitem="@layout/item_lesson_rule" />
+            tools:listitem="@layout/item_progress_task" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnSaveSettings"
