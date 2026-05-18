@@ -6,4 +6,9 @@
     </style>
 
     <style name="Theme.DriveCoachApplication_01_26A10208" parent="Base.Theme.DriveCoachApplication_01_26A10208" />
+
+    <style name="CustomTimePickerTheme" parent="Theme.MaterialComponents.DayNight.Dialog">
+        <item name="colorAccent">#829FFF</item>
+        <item name="android:textColorPrimary">#FFFFFF</item>
+    </style>
 </resources>

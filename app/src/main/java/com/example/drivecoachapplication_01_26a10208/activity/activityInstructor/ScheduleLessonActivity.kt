@@ -67,7 +67,7 @@ class ScheduleLessonActivity : AppCompatActivity() {
         val hour = calendar.get(Calendar.HOUR_OF_DAY)
 
         // Round Hour Constraint: Open the clock with the default minutes locked to 0
-        val timePickerDialog = TimePickerDialog(this, android.R.style.Theme_Material_Dialog_Alert, { _, selectedHour, _ ->
+        val timePickerDialog = TimePickerDialog(this, R.style.CustomTimePickerTheme, { _, selectedHour, _ ->
             // Completely ignoring what the user chose in minutes and setting it to a hard 00 in the string
             selectedTime = String.format(Locale.getDefault(), "%02d:00", selectedHour)
             binding.btnSelectTime.text = selectedTime
