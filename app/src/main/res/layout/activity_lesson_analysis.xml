@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:layoutDirection="ltr"
+    tools:context=".activity.activityInstructor.LessonAnalysisActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:text="Student Dashboard &amp; Analysis"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvAnalysisStudentName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="20dp"
+        android:text="Student: Loading..."
+        android:textColor="#829FFF"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        app:cardBackgroundColor="#1E1E1E"
+        app:cardCornerRadius="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:gravity="center">
+
+            <FrameLayout
+                android:layout_width="140dp"
+                android:layout_height="140dp">
+
+                <ProgressBar
+                    android:id="@+id/pbTotalProgressCircle"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:indeterminate="false"
+                    android:max="28"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/circular_progress_bar" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tvCircleCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="#FFFFFF"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lessons"
+                        android:textColor="#888888"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tvStudentStartDateDisplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Started: Loading..."
+                android:textColor="#829FFF"
+                android:textStyle="bold"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Task Distribution Progress"
+        android:textColor="#888888"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAnalysisTasks"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        tools:listitem="@layout/item_progress_task" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSaveAnalysisChanges"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:text="Save &amp; Update Student Progress"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:backgroundTint="#829FFF"
+        app:cornerRadius="12dp" />
+
+</LinearLayout>

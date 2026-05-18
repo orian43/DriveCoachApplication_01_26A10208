@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardBackgroundColor="#1E1E1E"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvStudentName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Student Name"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvStudentIdDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="ID: 123456789"
+                    android:textColor="#AAAAAA"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvStudentPhoneDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Phone: 0501234567"
+                    android:textColor="#AAAAAA"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvStudentStartDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Started: 17/05/2026"
+                    android:textColor="#829FFF"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCardResetPassword"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:paddingHorizontal="4dp"
+                    android:text="🔒 Password reset"
+                    android:textColor="#FFB300"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="2dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnDeleteStudent"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:padding="0dp"
+                    android:text="❌"
+                    android:textColor="#FF5252"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#333333"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnActionAddLesson"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="➕ Lesson"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp"
+                app:strokeColor="#555555"
+                app:cornerRadius="8dp"
+                android:layout_marginEnd="4dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnActionFullAnalysis"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="📊 Analysis"
+                android:textColor="#829FFF"
+                android:textSize="11sp"
+                app:strokeColor="#829FFF"
+                app:cornerRadius="8dp"
+                android:layout_marginHorizontal="2dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnActionViewHistory"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="📋 History"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp"
+                app:strokeColor="#555555"
+                app:cornerRadius="8dp"
+                android:layout_marginStart="4dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

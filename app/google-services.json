@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1090651340345",
+    "project_id": "drivecoach01-4fcd3",
+    "storage_bucket": "drivecoach01-4fcd3.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1090651340345:android:6f119b5d5996fd5ca097e8",
+        "android_client_info": {
+          "package_name": "com.example.drivecoachapplication_01_26a10208"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5LaG3HGEmkSDJa6Ni5d4ZoaeHvgsDH9c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:layoutDirection="ltr"
+    tools:context=".activity.activityStudent.StudentProfileActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:text="My Profile Details"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="24dp"
+        android:text="Keep your contact information up to date"
+        android:textColor="#AAAAAA"
+        android:textSize="13sp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="24dp"
+        app:cardBackgroundColor="#1A1A1A"
+        app:cardCornerRadius="45dp"
+        app:cardElevation="3dp">
+
+        <ImageView
+            android:id="@+id/ivStudentProfileBigAvatar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_profile" />
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:hint="National ID (Read-Only)"
+        app:hintTextColor="#666666"
+        app:boxStrokeColor="#333333">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etProfileStudentId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:textColor="#666666" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:hint="Email Address (Read-Only)"
+        app:hintTextColor="#666666"
+        app:boxStrokeColor="#333333">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etProfileStudentEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:textColor="#666666" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:hint="First Name"
+        app:hintTextColor="#829FFF"
+        app:boxStrokeColor="#829FFF">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etProfileStudentFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:hint="Last Name"
+        app:hintTextColor="#829FFF"
+        app:boxStrokeColor="#829FFF">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etProfileStudentLastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:hint="Phone Number"
+        app:hintTextColor="#829FFF"
+        app:boxStrokeColor="#829FFF">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etProfileStudentPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:textColor="#FFFFFF" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:hint="City"
+        app:hintTextColor="#829FFF"
+        app:boxStrokeColor="#829FFF">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etProfileStudentCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSaveStudentProfile"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Save Profile Changes"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:backgroundTint="#829FFF"
+        app:cornerRadius="12dp" />
+
+</LinearLayout>

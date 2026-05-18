@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:padding="24dp"
+    android:layoutDirection="ltr"
+    tools:context=".activity.activityInstructor.StudentLessonsHistoryActivity">
+
+    <TextView
+        android:id="@+id/tvHistoryMainTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="Lesson Log &amp; History"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvHistoryStudentSub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvHistoryMainTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="24dp"
+        android:text="Student: Loading..."
+        android:textColor="#829FFF"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvLessonHistory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tvHistoryStudentSub"
+        tools:listitem="@layout/item_history_lesson" />
+
+    <TextView
+        android:id="@+id/tvNoHistoryWarning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="No driving lessons recorded for this student."
+        android:textColor="#666666"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

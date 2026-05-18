@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DriveCoachApplication_01_26A10208">
+
+        <activity
+            android:name=".activity.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.LoginActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activity.activityInstructor.RegisterActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activity.activityInstructor.InstructorDashboardActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activity.activityInstructor.InstructorProfileActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activity.activityInstructor.LessonSettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.activityInstructor.AddStudentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.activityInstructor.ViewStudentsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activity.activityInstructor.UpcomingLessonsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activity.activityInstructor.ScheduleLessonActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activity.activityInstructor.StudentLessonsHistoryActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activity.activityInstructor.LessonAnalysisActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activity.activityStudent.StudentDashboardActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".activity.activityStudent.StudentProfileActivity"
+            android:exported="false"/>
+
+
+        <activity android:name=".activity.activityStudent.StudentLessonsActivity" />
+
+
+
+
+
+
+    </application>
+
+
+</manifest>

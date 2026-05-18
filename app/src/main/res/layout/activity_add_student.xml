@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:fillViewport="true"
+    android:layoutDirection="ltr"
+    tools:context=".activity.activityInstructor.AddStudentActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:id="@+id/tvAddStudentTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="New Student"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:hintTextColor="#829FFF"
+            android:textColorHint="#888888">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etStudentId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Student ID Number (9 Digits)"
+                android:inputType="number"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#222222" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:hintTextColor="#FFFFFF"
+            android:textColorHint="#888888">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etStudentFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="First Name"
+                android:inputType="textPersonName"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#222222" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:hintTextColor="#FFFFFF"
+            android:textColorHint="#888888">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etStudentLastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Last Name"
+                android:inputType="textPersonName"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#222222" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:hintTextColor="#FFFFFF"
+            android:textColorHint="#888888">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etStudentEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email Address"
+                android:inputType="textEmailAddress"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#222222" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:hintTextColor="#FFFFFF"
+            android:textColorHint="#888888">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etStudentPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#222222" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:hintTextColor="#FFFFFF"
+            android:textColorHint="#888888">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etStudentCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="City"
+                android:inputType="textPostalAddress"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#222222" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:hintTextColor="#FFFFFF"
+            android:textColorHint="#888888"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="#FFFFFF">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etStudentPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Initial Account Password"
+                android:inputType="textPassword"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#222222" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="Student Gender"
+            android:textColor="#AAAAAA"
+            android:textSize="14sp" />
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/toggleStudentGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            app:singleSelection="true"
+            app:checkedButton="@+id/btnStudentMale"
+            android:weightSum="2"
+            android:gravity="center">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnStudentMale"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:text="MALE"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:strokeColor="#555555"
+                app:strokeWidth="1dp"
+                app:cornerRadius="12dp"
+                android:layout_marginEnd="8dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnStudentFemale"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:text="FEMALE"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:strokeColor="#555555"
+                app:strokeWidth="1dp"
+                app:cornerRadius="12dp"
+                android:layout_marginStart="8dp" />
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSaveStudent"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Add Student to System"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:backgroundTint="#829FFF"
+            app:cornerRadius="12dp" />
+
+    </LinearLayout>
+</ScrollView>
