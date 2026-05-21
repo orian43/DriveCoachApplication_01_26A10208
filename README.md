@@ -1,7 +1,7 @@
 # DriveCoach
 App - An application for managing driving instructors and students
 
-<img width="893" height="1711" alt="image" src="https://github.com/user-attachments/assets/68f13956-cea8-4d96-9afe-5d708729f787" />
+<img width="280" alt="App Screenshot" src="https://github.com/user-attachments/assets/68f13956-cea8-4d96-9afe-5d708729f787" />
 
  This is a dedicated mobile application (Android Native) built to organize and smartly manage the entire world of driving lessons – both from the driving instructor's side and the student's side.
  
