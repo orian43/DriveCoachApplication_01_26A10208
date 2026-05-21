@@ -12,13 +12,17 @@ The app is divided into two main areas depending on the type of user logging in:
   * The instructor can view their daily lesson schedule.
   * The instructor sets up and manages their active student list (name, phone, city, email, and ID).
   * The instructor defines the school's "set of rules and quotas" (the minimum number of lessons required for each task, such as parking, highway driving, etc.) and can update them dynamically.
- 
+
+ <img width="280" alt="App Screenshot" src="https://github.com/user-attachments/assets/381c8c6e-6b65-4b81-9113-5319bf32f354" />
+
 2. **Student Side:**
   * The student logs in and gets a home screen with a personalized welcome title.
   * The student can see their clean schedule (dates and times of lessons scheduled for them).
   * The student tracks the progress of their tasks (how many lessons they completed out of the quota defined by the instructor) to know when they are ready for a test.
   * Student password reset can only be performed by the instructor.
- 
+
+ <img width="280" alt="App Screenshot" src="https://github.com/user-attachments/assets/b14cbc8f-4b99-4446-86c7-8704b6f1809b" />
+
 ---
  
 ## File Distribution and Architecture (Separation of Concerns)
