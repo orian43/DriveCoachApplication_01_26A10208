@@ -52,7 +52,13 @@ The instructor has full control and absolute security over the list of registere
  
 ## ⚙️ Technologies and Libraries in the Project
 * **Firebase Authentication:** For managing secure login and session saving for instructors, including an option to reset the password in English for students if necessary.
-* **Shared Preferences:** Permanent local memory on the device to save the student's session, which prevents them from logging out automatically when the app is closed or moves to the background, until they actively click the logout button (Logout).
 * **Cloud Firestore:** A real-time managed NoSQL cloud database that links students and instructors and manages the lessons table (`Lessons`).
 
-  ***** The system stores a "Snapshot" of quota requirements directly within the student's profile upon registration, ensuring that subsequent instructor updates only apply to new students and preserve the original learning terms for existing ones.
+---
+
+## NOTES:
+  * The system stores a "Snapshot" of quota requirements directly within the student's profile upon registration, ensuring that subsequent instructor updates only apply to new students and preserve the original learning terms for existing ones.
+  * New lesson settings set by the teacher will be valid for students who joined after the changes and not for students already studying with that teacher.
+  * I forgot my password in the student area, sending the student to apply for a password reset.
+  * Login by email: Email is checked for complete matching when there is a difference between uppercase and lowercase letters.
+    
